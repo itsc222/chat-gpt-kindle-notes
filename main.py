@@ -128,12 +128,5 @@ def generate_chat_response():
 
 # generate_chat_response()
 
-notes = (data['note']).to_list()
-
-# File path to save the data
-file_path = "/Users/ischneid/chat-gpt-kindle-notes/selected_clippings.txt"
-
-# Write the list elements to a text file with line breaks
-with open(file_path, "w") as file:
-    for item in notes:
-        file.write(str(item) + "\n" + "\n")
+data.write_csv('selected_clippings.csv')
+highlight_df_main.write_csv('my_clippings.csv')
